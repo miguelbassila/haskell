@@ -1,3 +1,4 @@
+-- Pattern Matching
 lucky :: Int -> String
 lucky 7 = "LUCKY NUMBER SEVEN!"
 lucky x = "Sorry, you're out of luck, pal"
@@ -14,12 +15,14 @@ factorial :: Int -> Int
 factorial 0 = 1
 factorial n = n * factorial (n-1)
 
+-- Pattern Matching with Tuples
 addVectors :: (Double, Double) -> (Double, Double) -> (Double, Double)
 addVectors a b = (fst a + fst b, snd a + snd b)
 
 addVectors' :: (Double, Double) -> (Double, Double) -> (Double, Double)
 addVectors' (x1, y1) (x2, y2) = (x1+x2, y1+y2)
 
+-- Pattern Matching with Lists and List Comprehensions
 head' :: [a] -> a
 head' [] = error "Can't call head on an empty list"
 head' (x:_) = x
@@ -43,3 +46,5 @@ bmiTell weight height
 	| bmi <= 30.0 = "You're overweight. Let's work out together!"
 	| otherwise = "You're obese. Go see a doctor."
 	where bmi = weight / height ^ 2
+
+-- Where's

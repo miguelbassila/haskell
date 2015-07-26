@@ -48,3 +48,8 @@ bmiTell weight height
 	where bmi = weight / height ^ 2
 
 -- Where's
+initials :: String -> String -> String
+initials firstname lastname = [f] ++ ". " ++ [l] ++ "."
+	where
+		(f:_) = firstname
+		(l:_) = lastname

@@ -69,3 +69,10 @@ cylinder r h =
 
 calcBmis' :: [(Double, Double)] -> [Double]
 calcBmis' xs = [bmi | (w,h) <- xs, let bmi = w/h^2, bmi > 25.0]
+
+-- Case
+describeList :: [a] -> String
+describeList ls = "The list is " ++ case ls of 
+		[] -> "empty."
+		[x] -> "a singleton list."
+		xs -> "a longer list."
